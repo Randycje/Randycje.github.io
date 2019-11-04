@@ -1,0 +1,108 @@
+﻿/*Introduction*/
+
+.introduction-info {
+  text-align: center;
+  background-image: url("images/port-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #ffffff;
+}
+.intro-name {
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 18vmin;
+}
+
+.font-50 {
+  font-size: 50px;
+}
+
+/*Miscellanous*/
+
+.full-vh {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #ffffff;
+}
+.half-vh {
+  min-height: 50vh;
+  height: 100%;
+  background-color: #ffffff;
+}
+.one-quart-vh {
+  min-height: 25vh;
+  height: 100%;
+  background-color: #ffffff;
+}
+.three-quart-vh {
+  min-height: 75vh;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/*Contact*/
+.contact-me h1 {
+  padding-top: 80px;
+}
+.container-fluid {
+  width: 70%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+label {
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 70%;
+  padding-left: 380px;
+}
+.contact-me-background {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      135deg,
+      rgba(185, 185, 185, 0.5) 0%,
+      rgba(185, 185, 185, 0.5) 12.5%,
+      rgba(191, 191, 191, 0.5) 12.5%,
+      rgba(191, 191, 191, 0.5) 25%,
+      rgba(198, 198, 198, 0.5) 25%,
+      rgba(198, 198, 198, 0.5) 37.5%,
+      rgba(204, 204, 204, 0.5) 37.5%,
+      rgba(204, 204, 204, 0.5) 50%,
+      rgba(210, 210, 210, 0.5) 50%,
+      rgba(210, 210, 210, 0.5) 62.5%,
+      rgba(216, 216, 216, 0.5) 62.5%,
+      rgba(216, 216, 216, 0.5) 75%,
+      rgba(223, 223, 223, 0.5) 75%,
+      rgba(223, 223, 223, 0.5) 87.5%,
+      rgba(229, 229, 229, 0.5) 87.5%,
+      rgba(229, 229, 229, 0.5) 100%
+    ),
+    linear-gradient(
+      45deg,
+      rgb(230, 230, 230) 0%,
+      rgb(230, 230, 230) 12.5%,
+      rgb(224, 224, 224) 12.5%,
+      rgb(224, 224, 224) 25%,
+      rgb(217, 217, 217) 25%,
+      rgb(217, 217, 217) 37.5%,
+      rgb(211, 211, 211) 37.5%,
+      rgb(211, 211, 211) 50%,
+      rgb(205, 205, 205) 50%,
+      rgb(205, 205, 205) 62.5%,
+      rgb(199, 199, 199) 62.5%,
+      rgb(199, 199, 199) 75%,
+      rgb(192, 192, 192) 75%,
+      rgb(192, 192, 192) 87.5%,
+      rgb(186, 186, 186) 87.5%,
+      rgb(186, 186, 186) 100%
+    );
+  height: 100%;
+}
