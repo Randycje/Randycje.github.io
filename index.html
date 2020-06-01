@@ -1,108 +1,158 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>RC - Coming Soon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        html {
+            --textColor: #333333;
+            --primaryColor: #23b16c;
+            --secondaryColor: #095a33;
+        }
+    </style>
+
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header>
-        <div class="full-vh">
-            <div class="introduction-info">
-                <nav class="navbar navbar-expand-lg navbar-dark py-4 ">
-                    <a class="navbar-brand text-white" href="#" style="margin-left:30vmin;font-size: 1.3em;font-weight:bold;"></a>
-                    <button class="navbar-toggler collapsed" type="button" 
-                        data-toggle="collapse" 
-                        data-target="#navbarNavDropdown" 
-                        aria-controls="navbarNavDropdown" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    <div class="row no-gutters justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-6">
+            <nav class="d-flex justify-content-between">
+                <div class="logo">Randy Chong</div>
 
-                    <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                        <div class="mr-auto"></div>
-                        <ul class="navbar-nav" style="margin-right:30vmin;">
-                            <li class="nav-item ">
-                                <a class="nav-link px-4" href="#portfolio">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link px-4" href="#about">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link px-4" href="#contact">Contact</a>
-                            </li>
-                        </ul>
+                <div> <a href="/Randy_Chong.pdf" download>Résumé</a></div>
+            </nav>
+
+            <div class="hero text-center">
+                <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/waving-hand-sign_emoji-modifier-fitzpatrick-type-1-2_1f44b-1f3fb_1f3fb.png"
+                    class="img-fluid mb-2" style="height: 50px;">
+
+                <div class="logo">
+                    <h1 class="mb-3">Hi! I'm Randy Chong</h1>
+                </div>
+                <p class="secondary">Gaining and merging both business and technology knowledge together</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="text-center">
+                <h1 class="mb-3">About me</h1>
+                <p>Business and technology have been a huge interest of mine and pursuing my Diploma in Business
+                    Informatics is assisting me in gaining the required knowledge to understand and combine both sectors
+                    together.
+                </p>
+            </div>
+
+            <div id="skills" class="mt-5">
+                <h2 class="text-center mb-5">My Skillset</h2>
+
+                <div class="d-flex flex-wrap justify-content-around">
+                    <div class="skill">
+                        <p><img src="/images/html-5.svg" class="img-fluid"></p>
+                        <p>HTML5</p>
                     </div>
-                </nav>
-                <div class="container-fluid">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <div class="intro-name">
-                                <p style="font-size:50px;" data-aos="fade-left" data-aos-duration="1000" data-aos-mirror="true">RC's Portfoilo</p>
-                                <p data-aos="fade-right" data-aos-duration="1000" data-aos-mirror="true">Coming Soon</p>
-                            </div>
+                    <div class="skill">
+                        <p><img src="/images/css-3.svg" class="img-fluid"></p>
+                        <p>CSS</p>
+                    </div>
+                    <div class="skill">
+                        <p><img src="/images/javascript.svg" class="img-fluid"></p>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="skill">
+                        <p><img src="/images/angular.png" class="img-fluid"></p>
+                        <p>AngularJS</p>
+                    </div>
+                    <div class="skill">
+                        <p><img src="/images/uipath.png" class="img-fluid"></p>
+                        <p>UiPath</p>
+                    </div>
+                    <div class="skill">
+                        <p><img src="/images/csharp.png" class="img-fluid"></p>
+                        <p>C#</p>
+                    </div>
+                    <div class="skill">
+                        <p><img src="/images/net.png" class="img-fluid"></p>
+                        <p>ASP.net</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div>
+                <div class="row justify-content-between">
+                    <div class="col-12">
+                        <h1 class="mb-5">My Projects</h1>
+                    </div>
+                    <div class="col-md-5 mb-4">
+                        <div class="project-info">
+                            <h5>SmallHabitsBigChanges</h5>
+                            <p class="date">Jan 2020</p>
+                            <p>Worked with a team to create and develop the website for the PUB saving water initiative
+                                competition.
+                                <strong>Top 4</strong> in the competition.</p>
+                            <p>
+                                <a href="https://smallhabitsbigchange.com" target="_blank">View the project</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 mb-4">
+                        <div class="project-img">
+                            <img src="/images/shbc.png" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="project-info">
+                            <h5>Final Year Project</h5>
+                            <p class="date">Mar 2020 - May 2020</p>
+                            <p> Worked with AngularJS and Firebase to create a platform that tabulates results for
+                                Educators</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="project-img">
+                            <img src="/images/fypj.gif" class="img-fluid">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="three-quart-vh contact-me-background">
-            <div class="row mx-0 justify-content-center">
-                <div class="col-md-10">
-                    <div class="contact-me">
-                        <h1 class="text-center font-50" data-aos="fade-up">Contact Me</h1>
-                        <p class="text-center" style="font-size:15px;" data-aos="fade-up">While I am developing my Portfoilo, feel free to send me a email!</p>
-                        </br>
-                        <form class="contact-field" action="#" method="POST" data-aos="fade-down"  id="contact">
-                            <div class="form-group">
-                                <label for="formName">Name</label>
-                                <input id="formName" class="form-control" placeholder="Your Name" type="text" name="name" required="required" width="50%">
-                            </div>
-        
-                            <div class="form-group">
-                                <label for="formEmail">Email</label>
-                                <input id="formEmail" class="form-control" placeholder="Your Email" type="email" name="email" required="required">
-                            </div>
-        
-                            <div class="form-group">
-                                <label for="formMessage">Message</label>
-                                <textarea id="formMessage" class="form-control" placeholder="Your Message" rows="4" cols="50" required="required" name="message"></textarea>
-                            </div>
-        
-                            <div class="form-group">
-                                <button class="btn btn-success">Send</button>
-                            </div>
-                        </form>
+            <div class="divider"></div>
+
+
+            <div class="hero text-center">
+                <h1 class="mb-5">Let's build your vision together</h1>
+
+                <div class="d-flex flex-column flex-md-row justify-content-around w-100">
+                    <div class="col mb-5">
+                        <h5>Email</h5>
+                        <a href="mailto:randychong.je@gmail.com">RandyChong.je@gmail.com</a>
+                    </div>
+                    <div class="col mb-5">
+                        <h5>LinkedIn</h5>
+                        <a href="https://www.linkedin.com/in/randycje/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="col mb-5">
+                        <h5>Résumé</h5>
+                        <a href="/Randy_Chong.pdf" download>Download PDF</a>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-
-    <main></main>
-    <section></section>
-    <article></article>
-    <contact></contact>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="js/index.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 </html>
