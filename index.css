@@ -54,7 +54,7 @@ a:hover {
 nav .logo {
   padding: 8px 20px;
   border: 3px none var(--primaryColor);
-  background-color: rgba(46, 176, 110, 0.1);
+  background-color: rgba(46, 59, 176, 0.1);
   color: var(--primaryColor);
   border-radius: 4px;
   text-transform: uppercase;
