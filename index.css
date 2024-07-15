@@ -127,3 +127,51 @@ html{
     margin-top: 10px;
   }
 }
+
+.tags-se{
+  background-color: orange;
+  color:white;
+  text-align: center;
+  width: 40%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.tags-me{
+  background-color: Green;
+  color:white;
+  text-align: center;
+  width: 40%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.tags-ee{
+  background-color: blue;
+  color:white;
+  text-align: center;
+  width: 40%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.tags-softskills{
+  background-color: Grey;
+  color:white;
+  text-align: center;
+  width: 40%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.tag{
+  margin-top: 2%;
+}
