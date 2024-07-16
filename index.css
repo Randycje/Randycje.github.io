@@ -132,46 +132,67 @@ html{
   background-color: orange;
   color:white;
   text-align: center;
-  width: 40%;
+  width: 35%;
   padding-top: 1%;
   padding-bottom: 1%;
   border-radius: 10px;
   display: inline-block;
+  font-size: small;
 }
 
 .tags-me{
   background-color: Green;
   color:white;
   text-align: center;
-  width: 40%;
+  width: 35%;
   padding-top: 1%;
   padding-bottom: 1%;
   border-radius: 10px;
   display: inline-block;
+  font-size: small;
 }
 
 .tags-ee{
   background-color: blue;
   color:white;
   text-align: center;
-  width: 40%;
+  width: 35%;
   padding-top: 1%;
   padding-bottom: 1%;
   border-radius: 10px;
   display: inline-block;
+  font-size: small;
 }
 
 .tags-softskills{
   background-color: Grey;
   color:white;
   text-align: center;
-  width: 40%;
+  width: 35%;
   padding-top: 1%;
   padding-bottom: 1%;
   border-radius: 10px;
   display: inline-block;
+  font-size: small;
+}
+
+.tags-coding{
+  background-color: red;
+  color:white;
+  text-align: center;
+  width: 35%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: small;
 }
 
 .tag{
   margin-top: 2%;
+}
+
+.other-projects-link{
+  font-weight: bold;
+  font-size: large;
 }
