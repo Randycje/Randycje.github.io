@@ -4,7 +4,7 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
     {
-        company: 'Infineon Technologies (Semi-Conductor)',
+        company: 'Infineon Technologies',
         role: 'Automation Engineer Intern',
         period: 'Present',
         description: 'Current internship focused on automation systems.',
@@ -17,7 +17,7 @@ const experiences = [
         ]
     },
     {
-        company: 'Kilde (FinTech)',
+        company: 'Kilde',
         role: 'Data Science Intern',
         period: 'Past',
         description: 'Internship focused on financial data analysis and modeling.',
