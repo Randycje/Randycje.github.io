@@ -74,6 +74,8 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -173,7 +175,7 @@ button {
     .container {
         padding: 0 1rem;
         width: 100%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; Removed to prevent potential double scrollbar issues */
     }
 
     /* Navbar Visibility Toggles */
