@@ -135,6 +135,15 @@ button {
     position: relative;
 }
 
+/* Default Visibility (Desktop first) */
+.mobile-menu-btn {
+    display: none !important;
+}
+
+.desktop-menu {
+    display: flex !important;
+}
+
 @keyframes bounce {
 
     0%,
@@ -167,9 +176,18 @@ button {
         overflow-x: hidden;
     }
 
-    /* Navbar specific adjustments will be handled via component state/inline styles 
-       or utility classes if added here. For now, we'll keep component specific logic 
-       in components but use global sizing fixes here. */
+    /* Navbar Visibility Toggles */
+    .desktop-menu {
+        display: none !important;
+    }
+
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+
+    .mobile-menu-overlay {
+        display: flex !important;
+    }
 
     .hero-section {
         height: auto !important;

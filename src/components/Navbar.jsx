@@ -57,72 +57,69 @@ const Navbar = ({ theme, toggleTheme }) => {
                 </a>
 
                 {/* Desktop Menu */}
-                {!isMobile && (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-                        <ul style={{ display: 'flex', gap: '2rem' }}>
-                            {navLinks.map((item) => (
-                                <li key={item}>
-                                    <a
-                                        href={`#${item.toLowerCase()}`}
-                                        style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}
-                                        className="nav-link"
-                                    >
-                                        <span style={{ color: 'var(--accent-cyan)', marginRight: '5px' }}>0{navLinks.indexOf(item) + 1}.</span>
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+                    <ul style={{ display: 'flex', gap: '2rem' }}>
+                        {navLinks.map((item) => (
+                            <li key={item}>
+                                <a
+                                    href={`#${item.toLowerCase()}`}
+                                    style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}
+                                    className="nav-link"
+                                >
+                                    <span style={{ color: 'var(--accent-cyan)', marginRight: '5px' }}>0{navLinks.indexOf(item) + 1}.</span>
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
-                        <button
-                            onClick={toggleTheme}
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '0.5rem',
-                                borderRadius: '50%',
-                                background: 'var(--bg-color)',
-                                border: '1px solid var(--accent-cyan)',
-                                color: 'var(--accent-cyan)',
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease'
-                            }}
-                            aria-label="Toggle Theme"
-                        >
-                            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                        </button>
-                    </div>
-                )}
+                    <button
+                        onClick={toggleTheme}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '0.5rem',
+                            borderRadius: '50%',
+                            background: 'var(--bg-color)',
+                            border: '1px solid var(--accent-cyan)',
+                            color: 'var(--accent-cyan)',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease'
+                        }}
+                        aria-label="Toggle Theme"
+                    >
+                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                </div>
 
                 {/* Mobile Menu Button */}
-                {isMobile && (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', zIndex: 101, marginRight: '0.5rem' }}>
-                        <button
-                            onClick={toggleTheme}
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '0.5rem',
-                                borderRadius: '50%',
-                                background: 'var(--bg-color)',
-                                border: '1px solid var(--accent-cyan)',
-                                color: 'var(--accent-cyan)',
-                                cursor: 'pointer'
-                            }}
-                        >
-                            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                        </button>
-                        <button onClick={toggleMenu} style={{ color: 'var(--accent-cyan)' }}>
-                            {isOpen ? <X size={30} /> : <Menu size={30} />}
-                        </button>
-                    </div>
-                )}
+                <div className="mobile-menu-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', zIndex: 101, marginRight: '0.5rem' }}>
+                    <button
+                        onClick={toggleTheme}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '0.5rem',
+                            borderRadius: '50%',
+                            background: 'var(--bg-color)',
+                            border: '1px solid var(--accent-cyan)',
+                            color: 'var(--accent-cyan)',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                    <button onClick={toggleMenu} style={{ color: 'var(--accent-cyan)' }}>
+                        {isOpen ? <X size={30} /> : <Menu size={30} />}
+                    </button>
+                </div>
 
                 {/* Mobile Menu Overlay */}
-                {isMobile && isOpen && (
+                {isOpen && (
                     <motion.div
+                        className="mobile-menu-overlay"
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
@@ -134,7 +131,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                             bottom: 0,
                             width: '75vw',
                             height: '100vh',
-                            backgroundColor: 'var(--card-bg)', // Use card bg for contrast or match nav
+                            backgroundColor: 'var(--card-bg)',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
