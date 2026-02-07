@@ -216,6 +216,10 @@ button {
     .experience-card {
         padding: 1.5rem !important;
     }
+
+    .footer-text {
+        display: none;
+    }
 }
 
 .hero-section {

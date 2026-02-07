@@ -17,7 +17,7 @@ const Footer = () => {
                             padding: '0.8rem 1.5rem', border: '1px solid var(--accent-cyan)',
                             color: 'var(--accent-cyan)', borderRadius: '4px'
                         }}>
-                        <Mail size={18} /> Say Hello
+                        <Mail size={18} /> <span className="footer-text">Say Hello</span>
                     </a>
                     <a href="https://linkedin.com/in/randycje" target="_blank" rel="noreferrer"
                         style={{
@@ -25,7 +25,7 @@ const Footer = () => {
                             padding: '0.8rem 1.5rem', border: '1px solid var(--text-secondary)',
                             color: 'var(--text-secondary)', borderRadius: '4px'
                         }}>
-                        <Linkedin size={18} /> LinkedIn
+                        <Linkedin size={18} /> <span className="footer-text">LinkedIn</span>
                     </a>
                     <a href="/Randy-Chong-Jun-Er_Resume.pdf" download
                         style={{
@@ -33,7 +33,7 @@ const Footer = () => {
                             padding: '0.8rem 1.5rem', border: '1px solid var(--accent-orange)',
                             color: 'var(--accent-orange)', borderRadius: '4px'
                         }}>
-                        <FileText size={18} /> Resume
+                        <FileText size={18} /> <span className="footer-text">Resume</span>
                     </a>
                 </div>
 
