@@ -150,3 +150,91 @@ button {
 .animate-bounce {
     animation: bounce 2s infinite;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .h1-mobile {
+        font-size: 2.5rem !important;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Navbar specific adjustments will be handled via component state/inline styles 
+       or utility classes if added here. For now, we'll keep component specific logic 
+       in components but use global sizing fixes here. */
+
+    .hero-section {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 120px !important;
+        align-items: flex-start !important;
+    }
+
+    /* Timeline Mobile Adjustments */
+    .timeline-container {
+        padding-left: 30px !important;
+        /* Reduce from 50px */
+    }
+
+    .timeline-line {
+        left: 10px !important;
+        /* Adjust line position */
+    }
+
+    .timeline-dot {
+        left: 1px !important;
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .experience-card {
+        padding: 1.5rem !important;
+    }
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Timeline Base Styles (applied via inline previously, moving to class for control) */
+.timeline-container {
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-blue), transparent);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.experience-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+}

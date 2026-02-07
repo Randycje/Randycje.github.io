@@ -45,14 +45,7 @@ const Experience = () => {
 
                 <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
                     {/* Timeline Line */}
-                    <div style={{
-                        position: 'absolute',
-                        left: '20px',
-                        top: '0',
-                        bottom: '0',
-                        width: '2px',
-                        background: 'linear-gradient(to bottom, var(--accent-cyan), var(--accent-blue), transparent)'
-                    }} />
+                    <div className="timeline-line" />
 
                     {experiences.map((exp, index) => (
                         <motion.div
@@ -61,31 +54,23 @@ const Experience = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            style={{
-                                marginBottom: '3rem',
-                                paddingLeft: '50px',
-                                position: 'relative'
-                            }}
+                            className="timeline-container"
                         >
                             {/* Timeline Dot */}
-                            <div style={{
-                                position: 'absolute',
-                                left: '11px',
-                                top: '5px',
-                                width: '20px',
-                                height: '20px',
-                                borderRadius: '50%',
-                                background: index === 0 ? 'var(--accent-orange)' : 'var(--bg-color)',
-                                border: `2px solid ${index === 0 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}`,
-                                zIndex: 1
-                            }} />
+                            <div
+                                className="timeline-dot"
+                                style={{
+                                    background: index === 0 ? 'var(--accent-orange)' : 'var(--bg-color)',
+                                    border: `2px solid ${index === 0 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}`,
+                                }}
+                            />
 
-                            <div style={{
-                                background: 'var(--card-bg)',
-                                padding: '2rem',
-                                borderRadius: '4px',
-                                borderLeft: `4px solid ${index === 0 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}`
-                            }}>
+                            <div
+                                className="experience-card"
+                                style={{
+                                    borderLeft: `4px solid ${index === 0 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}`
+                                }}
+                            >
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '1rem' }}>
                                     <div>
                                         <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
@@ -101,7 +86,8 @@ const Experience = () => {
                                         gap: '0.5rem',
                                         padding: '0.5rem 1rem',
                                         background: 'var(--chip-bg)',
-                                        borderRadius: '20px'
+                                        borderRadius: '20px',
+                                        marginTop: '0.5rem' // Added for mobile wrapping spacing
                                     }}>
                                         <Calendar size={14} /> {exp.period}
                                     </span>

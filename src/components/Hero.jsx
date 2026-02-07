@@ -5,7 +5,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="section hero" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <section className="section hero hero-section" id="hero">
             <BackgroundAnimation />
             <div className="container" style={{ textAlign: 'center', zIndex: 1 }}>
                 <motion.div
@@ -16,7 +16,7 @@ const Hero = () => {
                     <h2 style={{ color: 'var(--accent-cyan)', fontSize: '1.5rem', marginBottom: '1rem' }}>
                         Hello, I am
                     </h2>
-                    <h1 style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '1rem', background: 'linear-gradient(to right, var(--gradient-text-start), var(--gradient-text-end))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                    <h1 className="h1-mobile" style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '1rem', background: 'linear-gradient(to right, var(--gradient-text-start), var(--gradient-text-end))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                         Randy Chong
                     </h1>
                     <h3 style={{ fontSize: '2rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
