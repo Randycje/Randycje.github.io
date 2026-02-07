@@ -9,9 +9,11 @@ const experiences = [
         period: 'Present',
         description: 'Current internship focused on automation systems.',
         points: [
-            'Implementing new solution to achieve Industry4.0 standard.',
-            'Executing User Acceptance Testing (UAT) for new hardware.',
-            'Collaborating with engineering teams to further optimise workflow.'
+            'Manage manufacturing efficiency improvements by supporting technology upgrades and process enhancement across 30+ production lines.',
+            'Support User Acceptance Testing (UAT) for new system implementations, ensuring seamless integration and alignment with operational requirements before deployment.',
+            'Developed 5+ interactive Tableau dashboards to enable real-time monitoring of daily operations, empowering stakeholders and AI with data-driven insights for faster decision-making.',
+            'Collaborated with multiple cross-functional teams to identify automation opportunities, streamline workflows, and enhance overall production efficiency.',
+            'Performed preventive and corrective maintenance on Autonomous Mobile Robots (AMRs), including parts replacement to minimize downtime and maintain operational continuity.'
         ]
     },
     {
@@ -20,12 +22,11 @@ const experiences = [
         period: 'Past',
         description: 'Internship focused on financial data analysis and modeling.',
         points: [
-            'Discover relationship between datasets using SQL.',
-            'Creating insightful and interactive dashboard in Metabase.',
-            'Cleaning and organising data in Metabase using MySQL.',
-            'Setting up Segment to webpages to track customer activity.',
-            'Grouping an audience for specific advertising targeting',
-            'Designed and setup website on Leadpages.'
+            'Discover relationship between 20+ datasets and over 10,000+ rows of data using SQL.',
+            'Created 30+ insightful and interactive dashboard in Metabase to uncover business insights and customer behaviour.',
+            'Set up Segment plugin to multiple webpages to track customer activity and user behaviour, to better understand user journey.',
+            'Led the creation of multiple audience group based on their behaviour and demographics for specific advertising targeting.',
+            'Designed and set up 10+ landing pages on Leadpages for market insights and lead generation.'
         ]
     }
 ];
