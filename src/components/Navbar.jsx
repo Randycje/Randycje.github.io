@@ -89,7 +89,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                         }}
                         aria-label="Toggle Theme"
                     >
-                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                        {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
                     </button>
                 </div>
 
@@ -109,7 +109,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                             cursor: 'pointer'
                         }}
                     >
-                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                        {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
                     </button>
                     <button onClick={toggleMenu} style={{ color: 'var(--accent-cyan)' }}>
                         {isOpen ? <X size={30} /> : <Menu size={30} />}
