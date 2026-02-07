@@ -9,11 +9,10 @@ const experiences = [
         period: 'Present',
         description: 'Current internship focused on automation systems.',
         points: [
-            'Manage manufacturing efficiency improvements by supporting technology upgrades and process enhancement across 30+ production lines.',
-            'Support User Acceptance Testing (UAT) for new system implementations, ensuring seamless integration and alignment with operational requirements before deployment.',
-            'Developed 5+ interactive Tableau dashboards to enable real-time monitoring of daily operations, empowering stakeholders and AI with data-driven insights for faster decision-making.',
-            'Collaborated with multiple cross-functional teams to identify automation opportunities, streamline workflows, and enhance overall production efficiency.',
-            'Performed preventive and corrective maintenance on Autonomous Mobile Robots (AMRs), including parts replacement to minimize downtime and maintain operational continuity.'
+            'Facilitated critical User Acceptance (UAT) and Functional Integration Testing (FIT) for the Overhead Hoist Transport (OHT) system, ensuring seamless alignment with operational requirements prior to go-live.',
+            'Monitored system stability during the Hypercare phase, contributing to a stable rollout that achieved a 6% increase in Test OEE, 85% reduction in manual labor, and 100% elimination of customer returns.',
+            'Managed the maintenance lifecycle for a fleet of 25 AMRs, transitioning from hands-on troubleshooting (LiDAR sensors, drive units) to supervising technical teams for preventive maintenance execution.',
+            'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.'
         ]
     },
     {
@@ -22,11 +21,10 @@ const experiences = [
         period: 'Past',
         description: 'Internship focused on financial data analysis and modeling.',
         points: [
-            'Discover relationship between 20+ datasets and over 10,000+ rows of data using SQL.',
-            'Created 30+ insightful and interactive dashboard in Metabase to uncover business insights and customer behaviour.',
-            'Set up Segment plugin to multiple webpages to track customer activity and user behaviour, to better understand user journey.',
-            'Led the creation of multiple audience group based on their behaviour and demographics for specific advertising targeting.',
-            'Designed and set up 10+ landing pages on Leadpages for market insights and lead generation.'
+            'Consolidated 20+ disparate datasets using SQL to reveal key customer investing behaviors, enabling the leadership team to pivot strategy toward high-performing product lines.',
+            'Designed 30+ interactive Metabase dashboards for C-Suite executives, directly influencing the decision to discontinue underperforming investment packages.',
+            'Spearheaded the integration of Segment tracking to uncover user drop-off points, collaborated with engineering to resolve UI/UX friction which resulted in improved customer retention.',
+            'Supported marketing campaigns that scaled daily lead generation by 8x (from ~50 to ~400), ensuring seamless data capture across 10+ landing pages.'
         ]
     }
 ];
