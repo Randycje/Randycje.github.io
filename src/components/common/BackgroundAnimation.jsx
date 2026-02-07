@@ -8,6 +8,7 @@ const BackgroundAnimation = () => {
         const ctx = canvas.getContext('2d');
         let width, height;
         let particles = [];
+        let animationFrameId;
 
         const resize = () => {
             width = canvas.width = window.innerWidth;
@@ -72,7 +73,7 @@ const BackgroundAnimation = () => {
                 }
             });
 
-            requestAnimationFrame(animate);
+            animationFrameId = requestAnimationFrame(animate);
         };
 
         window.addEventListener('resize', resize);
@@ -80,7 +81,10 @@ const BackgroundAnimation = () => {
         init();
         animate();
 
-        return () => window.removeEventListener('resize', resize);
+        return () => {
+            window.removeEventListener('resize', resize);
+            cancelAnimationFrame(animationFrameId);
+        };
     }, []);
 
     return (
