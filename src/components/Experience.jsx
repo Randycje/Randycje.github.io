@@ -9,10 +9,10 @@ const experiences = [
         period: 'Present',
         description: 'Current internship focused on automation systems.',
         points: [
-            'Facilitated critical User Acceptance (UAT) and Functional Integration Testing (FIT) for the Overhead Hoist Transport (OHT) system, ensuring seamless alignment with operational requirements prior to go-live.',
-            'Monitored system stability during the Hypercare phase, contributing to a stable rollout that achieved a 6% increase in Test OEE, 85% reduction in manual labor, and 100% elimination of customer returns.',
+            'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
+            'Supported system stability during the Hypercare phase, contributing to a stable rollout that achieved a 6% increase in Test OEE, 85% reduction in manual labor, and 100% elimination of customer returns.',
             'Managed the maintenance lifecycle for a fleet of 25 AMRs, transitioning from hands-on troubleshooting (LiDAR sensors, drive units) to supervising technical teams for preventive maintenance execution.',
-            'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.'
+            'Facilitated critical User Acceptance (UAT) and Functional Integration Testing (FIT) for the Overhead Hoist Transport (OHT) system, ensuring seamless alignment with operational requirements prior to go-live.'
         ]
     },
     {

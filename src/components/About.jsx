@@ -21,7 +21,7 @@ const About = () => {
                             Technology have always been a huge interest of mine and pursuing my degree in Robotics System is helping me to elevate my interest, by gaining the required knowledge to understand how Robotics and AI works together.
                         </p>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                            I am hoping in the future, I am able to be part of something big to help contribute back to the society.
+                            I am hoping in the future, I am able to be part of a big project that is in my field of interest to help contribute back to the society.
                         </p>
                     </div>
                 </motion.div>
