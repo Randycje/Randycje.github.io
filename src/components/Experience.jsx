@@ -10,7 +10,7 @@ const experiences = [
         description: 'Current internship focused on automation systems.',
         points: [
             'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
-            'Supported system stability during the Hypercare phase, contributing to a stable rollout that achieved a 6% increase in Test OEE, 85% reduction in manual labor, and 100% elimination of customer returns.',
+            'Supported Hypercare during a warehouse automation rollout, cutting labour from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
             'Managed the maintenance lifecycle for a fleet of 25 AMRs, transitioning from hands-on troubleshooting (LiDAR sensors, drive units) to supervising technical teams for preventive maintenance execution.',
             'Facilitated critical User Acceptance (UAT) and Functional Integration Testing (FIT) for the Overhead Hoist Transport (OHT) system, ensuring seamless alignment with operational requirements prior to go-live.'
         ]
@@ -24,7 +24,7 @@ const experiences = [
             'Consolidated 20+ disparate datasets using SQL to reveal key customer investing behaviors, enabling the leadership team to pivot strategy toward high-performing product lines.',
             'Designed 30+ interactive Metabase dashboards for C-Suite executives, directly influencing the decision to discontinue underperforming investment packages.',
             'Spearheaded the integration of Segment tracking to uncover user drop-off points, collaborated with engineering to resolve UI/UX friction which resulted in improved customer retention.',
-            'Supported marketing campaigns that scaled daily lead generation by 8x (from ~50 to ~400), ensuring seamless data capture across 10+ landing pages.'
+            'Developed and supported a series of high-performing landing pages and marketing campaigns, resulting in an 8× surge in daily lead growth (~50 to ~400 leads).'
         ]
     }
 ];
