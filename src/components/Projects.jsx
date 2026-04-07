@@ -16,6 +16,20 @@ const projects = [
         image: '/hdb-agent-hierarchy.png'
     },
     {
+        title: 'Aircraft Insurance Survivor Prediction',
+        description: 'Engineered a supervised machine learning classification model to predict flight crash survival probabilities for insurance agents. Featuring a user-friendly Flask web interface, the model analyzes age, gender, and fare data, achieving over 90% accuracy through rigorous hyperparameter tuning.',
+        tech: ['Machine Learning', 'Scikit-learn', 'Flask'],
+        image: '/aircraft-insurance-ml.jpg'
+    },
+    /*
+    {
+        title: 'Clinical Trial Eligibility Predictor',
+        description: 'Developed an unsupervised clustering algorithm to determine patient suitability for a pharmaceutical obesity drug trial. Deployed via a custom Flask web application, the system processes anonymized health, height, and lifestyle metrics, fine-tuned to exceed a 90% accuracy threshold.',
+        tech: ['School Project', 'Clustering', 'Scikit-learn', 'Flask'],
+        image: '/clinical-trial-ml.png'
+    },
+    */
+    {
         title: 'Inflat-Able Mattress',
         description: 'Identified a critical need in nursing care and engineered a 4-part inflatable mattress system to assist with patient turning. The solution integrates seamlessly with standard hospital operating procedures and was selected as one of the top 3 projects to represent the cohort for the James Dyson Award.',
         tech: ['Project Management', 'Critical Thinking', 'System Engineering'],

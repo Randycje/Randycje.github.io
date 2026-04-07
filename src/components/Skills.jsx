@@ -2,13 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skillsData = [
-    { category: 'Soft Skills', items: ['Critical Thinking', 'Innovative Thinking', 'Adaptability', 'Problem Solving'] },
-    { category: 'Management Skills', items: ['Project Management', 'Agile Methodologies', 'Stakeholder Management'] },
+    { category: 'AI & ML', items: ['PyTorch', 'Matplotlib', 'LlamaIndex', 'NumPy', 'Pandas', 'Scikit-learn'] },
     { category: 'Technical Skills', items: ['Python', 'SQL', 'C++', 'C', 'C#', 'HTML/CSS', 'JavaScript'] },
-    { category: 'Platform & Software', items: ['ROS', 'UiPath', 'Tableau', 'Metabase'] }
+    { category: 'Platform & Software', items: ['ROS', 'UiPath', 'Tableau', 'Metabase'] },
+    { category: 'Management Skills', items: ['Project Management', 'Agile Methodologies', 'Stakeholder Management'] },
+    { category: 'Soft Skills', items: ['Critical Thinking', 'Innovative Thinking', 'Adaptability', 'Problem Solving'] }
 ];
 
-const colors = ['var(--accent-cyan)', '#0A84FF', '#FF9F1C', '#9D4EDD'];
+const colors = ['var(--accent-cyan)', '#0A84FF', '#FF9F1C', '#9D4EDD', '#FF2A54'];
 
 const Skills = () => {
     return (
