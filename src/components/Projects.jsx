@@ -253,99 +253,110 @@ const Projects = () => {
                     Featured Projects
                 </motion.h2>
 
-                {/* Carousel Row */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-
-                    {/* Prev Button */}
-                    <button
-                        onClick={() => navigate(-1)}
-                        disabled={startIndex === 0}
-                        aria-label="Previous Project"
-                        style={{
-                            flexShrink: 0,
-                            background: 'var(--card-bg)',
-                            border: '1px solid var(--card-border)',
-                            borderRadius: '50%',
-                            width: '48px',
-                            height: '48px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            cursor: startIndex === 0 ? 'default' : 'pointer',
-                            color: startIndex === 0 ? 'rgba(255,255,255,0.2)' : 'var(--accent-cyan)',
-                            boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-                            transition: 'transform 0.2s, color 0.2s',
-                            opacity: startIndex === 0 ? 0.4 : 1,
-                        }}
-                        onMouseEnter={e => { if (startIndex !== 0) e.currentTarget.style.transform = 'scale(1.12)'; }}
-                        onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                    >
-                        <ChevronLeft size={22} />
-                    </button>
-
-                    {/* Sliding Track */}
-                    <div ref={containerRef} style={{ flex: 1, overflow: 'hidden' }}>
-                        <motion.div
-                            style={{ display: 'flex', gap: `${GAP}px` }}
-                            animate={{ x: -startIndex * step }}
-                            transition={{ duration: 0.4, ease: 'easeInOut' }}
-                        >
-                            {projects.map((project, i) => (
-                                <div key={project.title} style={{ width: cardWidth, flexShrink: 0 }}>
-                                    <ProjectCard project={project} index={i} />
-                                </div>
-                            ))}
-                        </motion.div>
+                {visibleCards === 1 ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+                        {projects.map((project, i) => (
+                            <div key={project.title} style={{ width: '100%' }}>
+                                <ProjectCard project={project} index={i} />
+                            </div>
+                        ))}
                     </div>
+                ) : (
+                    <>
+                        {/* Carousel Row */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                            {/* Prev Button */}
+                            <button
+                                onClick={() => navigate(-1)}
+                                disabled={startIndex === 0}
+                                aria-label="Previous Project"
+                                style={{
+                                    flexShrink: 0,
+                                    background: 'var(--card-bg)',
+                                    border: '1px solid var(--card-border)',
+                                    borderRadius: '50%',
+                                    width: '48px',
+                                    height: '48px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    cursor: startIndex === 0 ? 'default' : 'pointer',
+                                    color: startIndex === 0 ? 'rgba(255,255,255,0.2)' : 'var(--accent-cyan)',
+                                    boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                                    transition: 'transform 0.2s, color 0.2s',
+                                    opacity: startIndex === 0 ? 0.4 : 1,
+                                }}
+                                onMouseEnter={e => { if (startIndex !== 0) e.currentTarget.style.transform = 'scale(1.12)'; }}
+                                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                            >
+                                <ChevronLeft size={22} />
+                            </button>
 
-                    {/* Next Button */}
-                    <button
-                        onClick={() => navigate(1)}
-                        disabled={startIndex === maxStart}
-                        aria-label="Next Project"
-                        style={{
-                            flexShrink: 0,
-                            background: 'var(--card-bg)',
-                            border: '1px solid var(--card-border)',
-                            borderRadius: '50%',
-                            width: '48px',
-                            height: '48px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            cursor: startIndex === maxStart ? 'default' : 'pointer',
-                            color: startIndex === maxStart ? 'rgba(255,255,255,0.2)' : 'var(--accent-cyan)',
-                            boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-                            transition: 'transform 0.2s, color 0.2s',
-                            opacity: startIndex === maxStart ? 0.4 : 1,
-                        }}
-                        onMouseEnter={e => { if (startIndex !== maxStart) e.currentTarget.style.transform = 'scale(1.12)'; }}
-                        onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                    >
-                        <ChevronRight size={22} />
-                    </button>
-                </div>
+                            {/* Sliding Track */}
+                            <div ref={containerRef} style={{ flex: 1, overflow: 'hidden' }}>
+                                <motion.div
+                                    style={{ display: 'flex', gap: `${GAP}px` }}
+                                    animate={{ x: -startIndex * step }}
+                                    transition={{ duration: 0.4, ease: 'easeInOut' }}
+                                >
+                                    {projects.map((project, i) => (
+                                        <div key={project.title} style={{ width: cardWidth, flexShrink: 0 }}>
+                                            <ProjectCard project={project} index={i} />
+                                        </div>
+                                    ))}
+                                </motion.div>
+                            </div>
 
-                {/* Dot Indicators — one per possible window position */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '2rem' }}>
-                    {Array.from({ length: maxStart + 1 }).map((_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setStartIndex(i)}
-                            aria-label={`Go to position ${i + 1}`}
-                            style={{
-                                width: i === startIndex ? '24px' : '8px',
-                                height: '8px',
-                                borderRadius: '4px',
-                                background: i === startIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.25)',
-                                border: 'none',
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease',
-                                padding: 0,
-                            }}
-                        />
-                    ))}
-                </div>
+                            {/* Next Button */}
+                            <button
+                                onClick={() => navigate(1)}
+                                disabled={startIndex === maxStart}
+                                aria-label="Next Project"
+                                style={{
+                                    flexShrink: 0,
+                                    background: 'var(--card-bg)',
+                                    border: '1px solid var(--card-border)',
+                                    borderRadius: '50%',
+                                    width: '48px',
+                                    height: '48px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    cursor: startIndex === maxStart ? 'default' : 'pointer',
+                                    color: startIndex === maxStart ? 'rgba(255,255,255,0.2)' : 'var(--accent-cyan)',
+                                    boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                                    transition: 'transform 0.2s, color 0.2s',
+                                    opacity: startIndex === maxStart ? 0.4 : 1,
+                                }}
+                                onMouseEnter={e => { if (startIndex !== maxStart) e.currentTarget.style.transform = 'scale(1.12)'; }}
+                                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                            >
+                                <ChevronRight size={22} />
+                            </button>
+                        </div>
+
+                        {/* Dot Indicators — one per possible window position */}
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '2rem' }}>
+                            {Array.from({ length: maxStart + 1 }).map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setStartIndex(i)}
+                                    aria-label={`Go to position ${i + 1}`}
+                                    style={{
+                                        width: i === startIndex ? '24px' : '8px',
+                                        height: '8px',
+                                        borderRadius: '4px',
+                                        background: i === startIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.25)',
+                                        border: 'none',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease',
+                                        padding: 0,
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
         </section>
     );
