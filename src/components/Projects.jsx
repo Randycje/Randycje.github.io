@@ -203,15 +203,26 @@ const ProjectCard = ({ project, index }) => {
     );
 };
 
-const VISIBLE = 3;
 const GAP = 40; // px, matches 2.5rem
 
 const Projects = () => {
     const [startIndex, setStartIndex] = useState(0);
     const containerRef = useRef(null);
     const [containerWidth, setContainerWidth] = useState(0);
+    const [visibleCards, setVisibleCards] = useState(3);
 
-    const maxStart = projects.length - VISIBLE;
+    const maxStart = Math.max(0, projects.length - visibleCards);
+
+    React.useEffect(() => {
+        const updateVisible = () => setVisibleCards(window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3);
+        updateVisible();
+        window.addEventListener('resize', updateVisible);
+        return () => window.removeEventListener('resize', updateVisible);
+    }, []);
+
+    React.useEffect(() => {
+        if (startIndex > maxStart) setStartIndex(maxStart);
+    }, [maxStart, startIndex]);
 
     React.useEffect(() => {
         const measure = () => {
@@ -223,7 +234,7 @@ const Projects = () => {
         return () => observer.disconnect();
     }, []);
 
-    const cardWidth = containerWidth > 0 ? (containerWidth - (VISIBLE - 1) * GAP) / VISIBLE : 0;
+    const cardWidth = containerWidth > 0 ? (containerWidth - (visibleCards - 1) * GAP) / visibleCards : 0;
     const step = cardWidth + GAP;
 
     const navigate = (dir) => {

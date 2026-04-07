@@ -40,16 +40,16 @@ const Skills = () => {
                             }}
                         >
                             <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>{group.category}</h3>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                 {group.items.map((skill, i) => (
                                     <span key={i} style={{
-                                        padding: '0.4rem 0.8rem',
+                                        padding: '0.35rem 0.75rem',
                                         background: 'var(--chip-bg)',
                                         borderRadius: '20px',
                                         color: 'var(--text-primary)',
                                         fontSize: '0.85rem',
-                                        lineHeight: '1.2',
-                                        textAlign: 'center',
+                                        display: 'inline-block',
+                                        lineHeight: '1.3',
                                         fontFamily: 'var(--font-heading)',
                                         border: '1px solid var(--card-border)'
                                     }}>
