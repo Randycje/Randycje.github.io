@@ -9,7 +9,7 @@ const skillsData = [
     { category: 'Soft Skills', items: ['Critical Thinking', 'Innovative Thinking', 'Adaptability', 'Problem Solving'] }
 ];
 
-const colors = ['var(--accent-cyan)', '#0A84FF', '#FF9F1C', '#9D4EDD', '#FF2A54'];
+const colors = ['#FF2A54', 'var(--accent-cyan)', '#0A84FF', '#FF9F1C', '#9D4EDD'];
 
 const Skills = () => {
     return (
@@ -24,7 +24,7 @@ const Skills = () => {
                     Area of Expertise
                 </motion.h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem' }}>
                     {skillsData.map((group, index) => (
                         <motion.div
                             key={index}

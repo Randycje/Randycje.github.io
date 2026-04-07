@@ -102,7 +102,8 @@ const ProjectCard = ({ project, index }) => {
                             style={{
                                 width: '100%',
                                 height: '100%',
-                                objectFit: 'cover',
+                                objectFit: 'contain',
+                                objectPosition: 'center',
                                 transition: 'transform 0.5s ease',
                                 opacity: 0.95
                             }}
