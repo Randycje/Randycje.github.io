@@ -6,19 +6,30 @@ const experiences = [
     {
         company: 'Infineon Technologies',
         role: 'Automation Engineer Intern',
-        period: 'Present',
+        period: '5 Jan 2026 - Current',
         description: 'Current internship focused on automation systems.',
         points: [
             'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
-            'Supported Hypercare during a warehouse automation rollout, cutting labour from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
-            'Managed the maintenance lifecycle for a fleet of 25 AMRs, transitioning from hands-on troubleshooting (LiDAR sensors, drive units) to supervising technical teams for preventive maintenance execution.',
-            'Facilitated critical User Acceptance (UAT) and Functional Integration Testing (FIT) for the Overhead Hoist Transport (OHT) system, ensuring seamless alignment with operational requirements prior to go-live.'
+            'Facilitated User Acceptance (UAT) and Functional Integration Testing (FIT) for new automation system, ensuring seamless alignment with operational requirements prior to go-live.',
+            'Supported Hypercare during warehouse automation rollout, cutting labor from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
+            'Managed the maintenance lifecycle for all Automation Equipment, transitioning from hands-on troubleshooting (LiDAR sensors, drive units, sensor testing) to supervising technical teams for preventive maintenance execution.'
+        ]
+    },
+    {
+        company: 'Singapore Institute of Technology',
+        role: 'Student Catalyst Coach',
+        period: 'Dec 2024 - Nov 2025',
+        description: 'Current internship focused on automation systems.',
+        points: [
+            'Achieved Platinum Certification to instruct peers on the safe operation of fabrication machinery (laser cutters, bench saws, and 3D printers).',
+            'Trained 100+ students in 1-on-1 and group settings, maintaining a zero-accident safety record across all shifts. ',
+            'Advised on student engineering projects, troubleshooting designs and optimizing manufacturing parameters (e.g., adjusting 3D print infill density for prototypes).'
         ]
     },
     {
         company: 'Kilde',
         role: 'Data Science Intern',
-        period: 'Past',
+        period: 'Mar 2021 - Aug 2021',
         description: 'Internship focused on financial data analysis and modeling.',
         points: [
             'Consolidated 20+ disparate datasets using SQL to reveal key customer investing behaviors, enabling the leadership team to pivot strategy toward high-performing product lines.',

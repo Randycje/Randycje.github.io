@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
+    {
+        title: 'LSTM Weather Prediction',
+        description: 'Developed a PyTorch LSTM neural network to forecast daily temperature and humidity using historical metrics from Data.gov.sg. The model achieved high visual accuracy against validation data, with results plotted and analyzed using Matplotlib.',
+        tech: ['Personal Project', 'Machine Learning', 'PyTorch', 'Matplot'],
+        image: '/weather-prediction.png'
+    },
+    {
+        title: 'HDB Interior Design AI Competition',
+        description: 'Built a multi-agent AI system on Telegram that guides users through HDB flat renovation planning. A manager agent runs a live competition between two AI designer agents, critiques their floor plans over three rounds, and generates a visualisation prompt for the winning design.',
+        tech: ['Personal Project', 'Agentic AI', 'LlamaIndex', 'FastAPI'],
+        image: '/hdb-agent-hierarchy.png'
+    },
     {
         title: 'Inflat-Able Mattress',
         description: 'Identified a critical need in nursing care and engineered a 4-part inflatable mattress system to assist with patient turning. The solution integrates seamlessly with standard hospital operating procedures and was selected as one of the top 3 projects to represent the cohort for the James Dyson Award.',
@@ -25,9 +37,11 @@ const projects = [
 
 const ProjectCard = ({ project, index }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const images = project.image.includes(',')
-        ? project.image.split(',').map(img => img.trim())
-        : [project.image];
+    const images = project.image
+        ? project.image.includes(',')
+            ? project.image.split(',').map(img => img.trim())
+            : [project.image]
+        : [];
 
     const hasMultiple = images.length > 1;
 
@@ -60,102 +74,104 @@ const ProjectCard = ({ project, index }) => {
             whileHover={{ y: -8 }}
         >
             {/* Project Image / Carousel */}
-            <div style={{ height: '220px', overflow: 'hidden', position: 'relative', group: 'carousel' }}>
-                <AnimatePresence mode='wait'>
-                    <motion.img
-                        key={currentIndex}
-                        src={images[currentIndex]}
-                        alt={`${project.title} highlight`}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            transition: 'transform 0.5s ease',
-                            opacity: 0.95
-                        }}
-                    />
-                </AnimatePresence>
-
-                {/* Carousel Controls */}
-                {hasMultiple && (
-                    <>
-                        <button
-                            onClick={prevSlide}
+            {images.length > 0 && (
+                <div style={{ height: '220px', overflow: 'hidden', position: 'relative', group: 'carousel' }}>
+                    <AnimatePresence mode='wait'>
+                        <motion.img
+                            key={currentIndex}
+                            src={images[currentIndex]}
+                            alt={`${project.title} highlight`}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
                             style={{
-                                position: 'absolute',
-                                left: '10px',
-                                top: '50%',
-                                transform: 'translateY(-50%)',
-                                background: 'rgba(0,0,0,0.5)',
-                                color: '#fff',
-                                border: 'none',
-                                borderRadius: '50%',
-                                width: '30px',
-                                height: '30px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                cursor: 'pointer',
-                                zIndex: 10
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                transition: 'transform 0.5s ease',
+                                opacity: 0.95
                             }}
-                            aria-label="Previous Image"
-                        >
-                            <ChevronLeft size={18} />
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            style={{
-                                position: 'absolute',
-                                right: '10px',
-                                top: '50%',
-                                transform: 'translateY(-50%)',
-                                background: 'rgba(0,0,0,0.5)',
-                                color: '#fff',
-                                border: 'none',
-                                borderRadius: '50%',
-                                width: '30px',
-                                height: '30px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                cursor: 'pointer',
-                                zIndex: 10
-                            }}
-                            aria-label="Next Image"
-                        >
-                            <ChevronRight size={18} />
-                        </button>
+                        />
+                    </AnimatePresence>
 
-                        {/* Dots Indicator */}
-                        <div style={{
-                            position: 'absolute',
-                            bottom: '10px',
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            display: 'flex',
-                            gap: '5px',
-                            zIndex: 10
-                        }}>
-                            {images.map((_, idx) => (
-                                <div
-                                    key={idx}
-                                    style={{
-                                        width: '6px',
-                                        height: '6px',
-                                        borderRadius: '50%',
-                                        backgroundColor: idx === currentIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.5)',
-                                        transition: 'background-color 0.3s'
-                                    }}
-                                />
-                            ))}
-                        </div>
-                    </>
-                )}
-            </div>
+                    {/* Carousel Controls */}
+                    {hasMultiple && (
+                        <>
+                            <button
+                                onClick={prevSlide}
+                                style={{
+                                    position: 'absolute',
+                                    left: '10px',
+                                    top: '50%',
+                                    transform: 'translateY(-50%)',
+                                    background: 'rgba(0,0,0,0.5)',
+                                    color: '#fff',
+                                    border: 'none',
+                                    borderRadius: '50%',
+                                    width: '30px',
+                                    height: '30px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    cursor: 'pointer',
+                                    zIndex: 10
+                                }}
+                                aria-label="Previous Image"
+                            >
+                                <ChevronLeft size={18} />
+                            </button>
+                            <button
+                                onClick={nextSlide}
+                                style={{
+                                    position: 'absolute',
+                                    right: '10px',
+                                    top: '50%',
+                                    transform: 'translateY(-50%)',
+                                    background: 'rgba(0,0,0,0.5)',
+                                    color: '#fff',
+                                    border: 'none',
+                                    borderRadius: '50%',
+                                    width: '30px',
+                                    height: '30px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    cursor: 'pointer',
+                                    zIndex: 10
+                                }}
+                                aria-label="Next Image"
+                            >
+                                <ChevronRight size={18} />
+                            </button>
+
+                            {/* Dots Indicator */}
+                            <div style={{
+                                position: 'absolute',
+                                bottom: '10px',
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                display: 'flex',
+                                gap: '5px',
+                                zIndex: 10
+                            }}>
+                                {images.map((_, idx) => (
+                                    <div
+                                        key={idx}
+                                        style={{
+                                            width: '6px',
+                                            height: '6px',
+                                            borderRadius: '50%',
+                                            backgroundColor: idx === currentIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.5)',
+                                            transition: 'background-color 0.3s'
+                                        }}
+                                    />
+                                ))}
+                            </div>
+                        </>
+                    )}
+                </div>
+            )}
 
             {/* Project Details */}
             <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
@@ -172,7 +188,33 @@ const ProjectCard = ({ project, index }) => {
     );
 };
 
+const VISIBLE = 3;
+const GAP = 40; // px, matches 2.5rem
+
 const Projects = () => {
+    const [startIndex, setStartIndex] = useState(0);
+    const containerRef = useRef(null);
+    const [containerWidth, setContainerWidth] = useState(0);
+
+    const maxStart = projects.length - VISIBLE;
+
+    React.useEffect(() => {
+        const measure = () => {
+            if (containerRef.current) setContainerWidth(containerRef.current.offsetWidth);
+        };
+        measure();
+        const observer = new ResizeObserver(measure);
+        if (containerRef.current) observer.observe(containerRef.current);
+        return () => observer.disconnect();
+    }, []);
+
+    const cardWidth = containerWidth > 0 ? (containerWidth - (VISIBLE - 1) * GAP) / VISIBLE : 0;
+    const step = cardWidth + GAP;
+
+    const navigate = (dir) => {
+        setStartIndex((prev) => Math.max(0, Math.min(prev + dir, maxStart)));
+    };
+
     return (
         <section className="section projects" id="projects" style={{ backgroundColor: 'var(--section-bg-alt)' }}>
             <div className="container">
@@ -185,15 +227,97 @@ const Projects = () => {
                     Featured Projects
                 </motion.h2>
 
-                {/* Grid Layout for Side-by-Side Row */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                    gap: '2.5rem',
-                    alignItems: 'start'
-                }}>
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} index={index} />
+                {/* Carousel Row */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+
+                    {/* Prev Button */}
+                    <button
+                        onClick={() => navigate(-1)}
+                        disabled={startIndex === 0}
+                        aria-label="Previous Project"
+                        style={{
+                            flexShrink: 0,
+                            background: 'var(--card-bg)',
+                            border: '1px solid var(--card-border)',
+                            borderRadius: '50%',
+                            width: '48px',
+                            height: '48px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: startIndex === 0 ? 'default' : 'pointer',
+                            color: startIndex === 0 ? 'rgba(255,255,255,0.2)' : 'var(--accent-cyan)',
+                            boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                            transition: 'transform 0.2s, color 0.2s',
+                            opacity: startIndex === 0 ? 0.4 : 1,
+                        }}
+                        onMouseEnter={e => { if (startIndex !== 0) e.currentTarget.style.transform = 'scale(1.12)'; }}
+                        onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                    >
+                        <ChevronLeft size={22} />
+                    </button>
+
+                    {/* Sliding Track */}
+                    <div ref={containerRef} style={{ flex: 1, overflow: 'hidden' }}>
+                        <motion.div
+                            style={{ display: 'flex', gap: `${GAP}px` }}
+                            animate={{ x: -startIndex * step }}
+                            transition={{ duration: 0.4, ease: 'easeInOut' }}
+                        >
+                            {projects.map((project, i) => (
+                                <div key={project.title} style={{ width: cardWidth, flexShrink: 0 }}>
+                                    <ProjectCard project={project} index={i} />
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
+
+                    {/* Next Button */}
+                    <button
+                        onClick={() => navigate(1)}
+                        disabled={startIndex === maxStart}
+                        aria-label="Next Project"
+                        style={{
+                            flexShrink: 0,
+                            background: 'var(--card-bg)',
+                            border: '1px solid var(--card-border)',
+                            borderRadius: '50%',
+                            width: '48px',
+                            height: '48px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: startIndex === maxStart ? 'default' : 'pointer',
+                            color: startIndex === maxStart ? 'rgba(255,255,255,0.2)' : 'var(--accent-cyan)',
+                            boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                            transition: 'transform 0.2s, color 0.2s',
+                            opacity: startIndex === maxStart ? 0.4 : 1,
+                        }}
+                        onMouseEnter={e => { if (startIndex !== maxStart) e.currentTarget.style.transform = 'scale(1.12)'; }}
+                        onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                    >
+                        <ChevronRight size={22} />
+                    </button>
+                </div>
+
+                {/* Dot Indicators — one per possible window position */}
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '2rem' }}>
+                    {Array.from({ length: maxStart + 1 }).map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setStartIndex(i)}
+                            aria-label={`Go to position ${i + 1}`}
+                            style={{
+                                width: i === startIndex ? '24px' : '8px',
+                                height: '8px',
+                                borderRadius: '4px',
+                                background: i === startIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.25)',
+                                border: 'none',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease',
+                                padding: 0,
+                            }}
+                        />
                     ))}
                 </div>
             </div>
@@ -202,3 +326,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
