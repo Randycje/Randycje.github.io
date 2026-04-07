@@ -13,7 +13,7 @@ const projects = [
         title: 'HDB Interior Design AI Competition',
         description: 'Built a multi-agent AI system on Telegram that guides users through HDB flat renovation planning. A manager agent runs a live competition between two AI designer agents, critiques their floor plans over three rounds, and generates a visualisation prompt for the winning design.',
         tech: ['Personal Project', 'Agentic AI', 'LlamaIndex', 'FastAPI'],
-        image: '/hdb-agent-hierarchy.png'
+        image: '/hdb-interior.png'
     },
     {
         title: 'Aircraft Insurance Survivor Prediction',
@@ -210,6 +210,7 @@ const Projects = () => {
     const containerRef = useRef(null);
     const [containerWidth, setContainerWidth] = useState(0);
     const [visibleCards, setVisibleCards] = useState(3);
+    const [showAllMobile, setShowAllMobile] = useState(false);
 
     const maxStart = Math.max(0, projects.length - visibleCards);
 
@@ -255,11 +256,41 @@ const Projects = () => {
 
                 {visibleCards === 1 ? (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-                        {projects.map((project, i) => (
+                        {(showAllMobile ? projects : projects.slice(0, 3)).map((project, i) => (
                             <div key={project.title} style={{ width: '100%' }}>
                                 <ProjectCard project={project} index={i} />
                             </div>
                         ))}
+
+                        {projects.length > 3 && (
+                            <button
+                                onClick={() => setShowAllMobile(!showAllMobile)}
+                                style={{
+                                    marginTop: '1rem',
+                                    padding: '0.8rem 2rem',
+                                    background: 'transparent',
+                                    color: 'var(--accent-cyan)',
+                                    border: '2px solid var(--accent-cyan)',
+                                    borderRadius: '30px',
+                                    fontSize: '1rem',
+                                    fontFamily: 'var(--font-heading)',
+                                    cursor: 'pointer',
+                                    alignSelf: 'center',
+                                    fontWeight: 'bold',
+                                    transition: 'all 0.3s ease',
+                                }}
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = 'var(--accent-cyan)';
+                                    e.currentTarget.style.color = '#000';
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = 'transparent';
+                                    e.currentTarget.style.color = 'var(--accent-cyan)';
+                                }}
+                            >
+                                {showAllMobile ? 'Show Less' : 'Show More Projects'}
+                            </button>
+                        )}
                     </div>
                 ) : (
                     <>

@@ -6,7 +6,7 @@ const experiences = [
     {
         company: 'Infineon Technologies',
         role: 'Automation Engineer Intern',
-        period: '5 Jan 2026 - Current',
+        period: 'Jan 2026 - Current',
         description: 'Current internship focused on automation systems.',
         points: [
             'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
