@@ -17,7 +17,7 @@ const projects = [
     },
     {
         title: 'Aircraft Insurance Survivor Prediction',
-        description: 'Engineered a supervised machine learning classification model to predict flight crash survival probabilities for insurance agents. Featuring a user-friendly Flask web interface, the model analyzes age, gender, and fare data, achieving over 90% accuracy through rigorous hyperparameter tuning.',
+        description: 'Engineered a supervised machine learning classification model to predict flight crash survival probabilities for insurance agents. Conducted extensive Exploratory Data Analysis (EDA) to identify core features like age, gender, and fare. Deployed via a Flask web interface, the model achieves over 90% accuracy through rigorous hyperparameter tuning.',
         tech: ['Machine Learning', 'Scikit-learn', 'Flask'],
         image: '/aircraft-insurance-ml.jpg'
     },
