@@ -7,7 +7,7 @@ const projects = [
         title: 'LSTM Weather Prediction',
         description: 'Developed a PyTorch LSTM neural network to forecast daily temperature and humidity using historical metrics from Data.gov.sg. The model achieved high visual accuracy against validation data, with results plotted and analyzed using Matplotlib.',
         tech: ['Personal Project', 'Machine Learning', 'PyTorch', 'Matplot'],
-        image: '/weather-prediction.png'
+        image: '/LSTM.png, LSTM2.png'
     },
     {
         title: 'HDB Interior Design AI Competition',
