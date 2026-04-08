@@ -12,7 +12,7 @@ const projects = [
     {
         title: 'HDB Interior Design AI Competition',
         description: 'Built a multi-agent AI system on Telegram that guides users through HDB flat renovation planning. A manager agent runs a live competition between two AI designer agents, critiques their floor plans over three rounds, and generates a visualisation prompt for the winning design.',
-        tech: ['Personal Project', 'Agentic AI', 'LlamaIndex', 'FastAPI'],
+        tech: ['Personal Project', 'Agentic AI', 'LlamaIndex'],
         image: '/hdb-interior.png'
     },
     {
