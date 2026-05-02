@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
@@ -54,19 +54,21 @@ const Experience = () => {
                     Work Experience
                 </motion.h2>
 
-                <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+                <motion.div layout style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
                     {/* Timeline Line */}
                     <div className="timeline-line" />
 
-                    {(showAllExp ? experiences : experiences.slice(0, 1)).map((exp, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
-                            className="timeline-container"
-                        >
+                    <AnimatePresence>
+                        {(showAllExp ? experiences : experiences.slice(0, 1)).map((exp, index) => (
+                            <motion.div
+                                layout
+                                key={exp.company + exp.role}
+                                initial={{ opacity: 0, height: 0, y: -20 }}
+                                animate={{ opacity: 1, height: 'auto', y: 0 }}
+                                exit={{ opacity: 0, height: 0, y: -20, overflow: 'hidden' }}
+                                transition={{ duration: 0.4 }}
+                                className="timeline-container"
+                            >
                             {/* Timeline Dot */}
                             <div
                                 className="timeline-dot"
@@ -120,6 +122,7 @@ const Experience = () => {
                             </div>
                         </motion.div>
                     ))}
+                    </AnimatePresence>
 
                     {experiences.length > 1 && (
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
@@ -150,7 +153,7 @@ const Experience = () => {
                             </button>
                         </div>
                     )}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
