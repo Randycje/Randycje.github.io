@@ -18,7 +18,7 @@ const About = () => {
                             I am a passionate <strong>Individual</strong> with a unique background in <strong>Robotics Systems (University)</strong> and <strong>Business Informatics (Polytechnic)</strong>. This distinctive combination allows me to bridge the gap between business logic, data analytics, and physical systems.
                         </p>
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                            Technology have always been a huge interest of mine and pursuing my degree in Robotics System is helping me to elevate my interest, by gaining the required knowledge to understand how Robotics and AI works together.
+                            Technology has always been a huge interest of mine and pursuing my degree in Robotics System is helping me to elevate my interest, by gaining the required knowledge to understand how Robotics and AI works together.
                         </p>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
                             I am hoping in the future, I am able to be part of a big project that is in my field of interest to help contribute back to the society.

@@ -24,7 +24,7 @@ const Hero = () => {
                     </h3>
                     <p style={{ maxWidth: '600px', margin: '0 auto 3rem', color: 'var(--text-secondary)' }}>
                         Bridging the gap between digital data and physical systems.
-                        Designing minimalistic, high-performance solution with a focus from data analytics using robotics and automation.
+                        Designing minimalistic, high-performance solutions with a focus from data analytics using robotics and automation.
                     </p>
 
                     <motion.a

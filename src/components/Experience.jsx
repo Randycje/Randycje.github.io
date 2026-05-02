@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
 
@@ -19,7 +19,7 @@ const experiences = [
         company: 'Singapore Institute of Technology',
         role: 'Student Catalyst Coach',
         period: 'Dec 2024 - Nov 2025',
-        description: 'Current internship focused on automation systems.',
+        description: 'Coaching students on using fabrication lab equipment.',
         points: [
             'Achieved Platinum Certification to instruct peers on the safe operation of fabrication machinery (laser cutters, bench saws, and 3D printers).',
             'Trained 100+ students in 1-on-1 and group settings, maintaining a zero-accident safety record across all shifts. ',
@@ -41,6 +41,7 @@ const experiences = [
 ];
 
 const Experience = () => {
+    const [showAllExp, setShowAllExp] = useState(false);
     return (
         <section className="section experience" id="experience" style={{ backgroundColor: 'var(--section-bg)' }}>
             <div className="container">
@@ -57,7 +58,7 @@ const Experience = () => {
                     {/* Timeline Line */}
                     <div className="timeline-line" />
 
-                    {experiences.map((exp, index) => (
+                    {(showAllExp ? experiences : experiences.slice(0, 1)).map((exp, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
@@ -119,6 +120,36 @@ const Experience = () => {
                             </div>
                         </motion.div>
                     ))}
+
+                    {experiences.length > 1 && (
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+                            <button
+                                onClick={() => setShowAllExp(!showAllExp)}
+                                style={{
+                                    padding: '0.8rem 2rem',
+                                    background: 'transparent',
+                                    color: 'var(--accent-cyan)',
+                                    border: '2px solid var(--accent-cyan)',
+                                    borderRadius: '30px',
+                                    fontSize: '1rem',
+                                    fontFamily: 'var(--font-heading)',
+                                    cursor: 'pointer',
+                                    fontWeight: 'bold',
+                                    transition: 'all 0.3s ease',
+                                }}
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = 'var(--accent-cyan)';
+                                    e.currentTarget.style.color = '#000';
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = 'transparent';
+                                    e.currentTarget.style.color = 'var(--accent-cyan)';
+                                }}
+                            >
+                                {showAllExp ? 'View Less' : 'View All Experience'}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
