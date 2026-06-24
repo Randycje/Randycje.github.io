@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skillsData = [
-    { category: 'AI & ML', items: ['Vibe-Coding', 'LlamaIndex', 'PyTorch', 'Matplotlib', 'NumPy', 'Pandas', 'Scikit-learn'] },
+    { category: 'AI & ML', items: ['LlamaIndex', 'HuggingFace', 'ComfyUI', 'LangChain', 'LangSmith', 'APIs', 'PyTorch', 'Matplotlib', 'NumPy', 'Pandas', 'Scikit-learn'] },
     { category: 'Technical Skills', items: ['Python', 'SQL', 'C++', 'C', 'C#', 'HTML/CSS', 'JavaScript'] },
     { category: 'Platform & Software', items: ['ROS', 'UiPath', 'Tableau', 'Metabase'] },
     { category: 'Management Skills', items: ['Project Management', 'Agile Methodologies', 'Stakeholder Management'] },

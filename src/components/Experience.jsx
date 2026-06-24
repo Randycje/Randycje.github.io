@@ -9,10 +9,10 @@ const experiences = [
         period: 'Jan 2026 - Current',
         description: 'Current internship focused on automation systems.',
         points: [
-            'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor ASRS storage efficiency and AMR breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
-            'Facilitated User Acceptance (UAT) and Functional Integration Testing (FIT) for new automation system, ensuring seamless alignment with operational requirements prior to go-live.',
-            'Supported Hypercare during warehouse automation rollout, cutting labor from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
-            'Managed the maintenance lifecycle for all Automation Equipment, transitioning from hands-on troubleshooting (LiDAR sensors, drive units, sensor testing) to supervising technical teams for preventive maintenance execution.'
+            'Coordinated with multiple vendors to execute User Acceptance (UAT) and Functional Integration Testing (FIT) for new automation system, ensuring seamless alignment with operational requirements prior to go-live.',
+            'Developed multiple interactive Tableau dashboards used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
+            'Supported Hypercare during warehouse automation rollout, cutting labour from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
+            'Managed the maintenance lifecycle for all Automation Equipments, transitioning from hands-on troubleshooting (LiDAR sensors, sensor testing, error debugging) to supervising technical teams for preventive maintenance execution.'
         ]
     },
     {

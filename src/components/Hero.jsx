@@ -20,7 +20,7 @@ const Hero = () => {
                         Randy Chong
                     </h1>
                     <h3 style={{ fontSize: '2rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-                        Robotics & Automation <span style={{ color: 'var(--accent-orange)' }}>|</span> AI & ML <span style={{ color: 'var(--accent-orange)' }}>|</span> System Engineer <span style={{ color: 'var(--accent-orange)' }}>|</span> Data Science
+                        Robotics & Automation <span style={{ color: 'var(--accent-orange)' }}>|</span> AI & ML <span style={{ color: 'var(--accent-orange)' }}>|</span> Data Science
                     </h3>
                     <p style={{ maxWidth: '600px', margin: '0 auto 3rem', color: 'var(--text-secondary)' }}>
                         Bridging the gap between digital data and physical systems.
