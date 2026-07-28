@@ -5,9 +5,9 @@ import { Briefcase, Calendar } from 'lucide-react';
 const experiences = [
     {
         company: 'Infineon Technologies',
-        role: 'Automation Engineer Intern',
+        role: 'Automation Engineer',
         period: 'Jan 2026 - Current',
-        description: 'Current internship focused on automation systems.',
+        description: 'Automation Engineer experience focused on developing and testing automation systems.',
         points: [
             'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance. ',
             'Spearheaded engineering improvement projects across existing AMHS automation by aligning multiple vendors and internal stakeholders for better system monitoring and maintenance. ',
@@ -28,9 +28,9 @@ const experiences = [
     },
     {
         company: 'Kilde',
-        role: 'Data Science Intern',
+        role: 'Data Science',
         period: 'Mar 2021 - Aug 2021',
-        description: 'Internship focused on financial data analysis and modeling.',
+        description: 'Data Science experience focused on financial data analysis and modeling.',
         points: [
             'Consolidated 20+ disparate datasets using SQL to reveal key customer investing behaviors, enabling the leadership team to pivot strategy toward high-performing product lines.',
             'Designed 30+ interactive Metabase dashboards for C-Suite executives, directly influencing the decision to discontinue underperforming investment packages.',
