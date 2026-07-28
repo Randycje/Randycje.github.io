@@ -31,7 +31,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
-    const navLinks = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
+    const navLinks = ['About', 'Experience', 'Education', 'Skills', 'Projects', 'Contact'];
 
     return (
         <motion.nav

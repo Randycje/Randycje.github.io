@@ -4,6 +4,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
     {
+        title: 'Automatic Computer Vision Unloading',
+        description: 'Trained a custom YOLOv8 object detection model using PyTorch and NumPy to automate a conveyor unloading system. Deployed the model in real-time using OpenCV and an external RTMP camera to process live camera feeds and execute safety-trigger unloading logic.',
+        tech: ['Computer Vision', 'YOLOv8', 'PyTorch', 'OpenCV', 'Real-Time'],
+        image: '/cv-unloading.jpg',
+        isCurrent: true
+    },
+    {
         title: 'LSTM Weather Prediction',
         description: 'Developed a PyTorch LSTM neural network to forecast daily temperature and humidity using historical metrics from Data.gov.sg. The model achieved high visual accuracy against validation data, with results plotted and analyzed using Matplotlib.',
         tech: ['Personal Project', 'Machine Learning', 'PyTorch', 'Matplot'],
@@ -75,11 +82,9 @@ const ProjectCard = ({ project, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
+            className="glass-card"
             style={{
-                background: 'var(--card-bg)',
-                borderRadius: '6px',
-                border: '1px solid var(--card-border)',
-                boxShadow: '0 10px 30px -15px rgba(2,12,27,0.7)',
+                borderRadius: 'var(--radius-lg)',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
@@ -89,7 +94,7 @@ const ProjectCard = ({ project, index }) => {
         >
             {/* Project Image / Carousel */}
             {images.length > 0 && (
-                <div style={{ height: '220px', overflow: 'hidden', position: 'relative', group: 'carousel' }}>
+                <div style={{ height: '165px', overflow: 'hidden', position: 'relative', background: 'rgba(0, 0, 0, 0.2)' }}>
                     <AnimatePresence mode='wait'>
                         <motion.img
                             key={currentIndex}
@@ -120,12 +125,13 @@ const ProjectCard = ({ project, index }) => {
                                     left: '10px',
                                     top: '50%',
                                     transform: 'translateY(-50%)',
-                                    background: 'rgba(0,0,0,0.5)',
+                                    background: 'rgba(7, 10, 18, 0.75)',
                                     color: '#fff',
-                                    border: 'none',
+                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                    backdropFilter: 'blur(8px)',
                                     borderRadius: '50%',
-                                    width: '30px',
-                                    height: '30px',
+                                    width: '32px',
+                                    height: '32px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -143,12 +149,13 @@ const ProjectCard = ({ project, index }) => {
                                     right: '10px',
                                     top: '50%',
                                     transform: 'translateY(-50%)',
-                                    background: 'rgba(0,0,0,0.5)',
+                                    background: 'rgba(7, 10, 18, 0.75)',
                                     color: '#fff',
-                                    border: 'none',
+                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                    backdropFilter: 'blur(8px)',
                                     borderRadius: '50%',
-                                    width: '30px',
-                                    height: '30px',
+                                    width: '32px',
+                                    height: '32px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -163,22 +170,22 @@ const ProjectCard = ({ project, index }) => {
                             {/* Dots Indicator */}
                             <div style={{
                                 position: 'absolute',
-                                bottom: '10px',
+                                bottom: '8px',
                                 left: '50%',
                                 transform: 'translateX(-50%)',
                                 display: 'flex',
-                                gap: '5px',
+                                gap: '6px',
                                 zIndex: 10
                             }}>
                                 {images.map((_, idx) => (
                                     <div
                                         key={idx}
                                         style={{
-                                            width: '6px',
+                                            width: idx === currentIndex ? '16px' : '6px',
                                             height: '6px',
-                                            borderRadius: '50%',
-                                            backgroundColor: idx === currentIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.5)',
-                                            transition: 'background-color 0.3s'
+                                            borderRadius: '3px',
+                                            backgroundColor: idx === currentIndex ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.4)',
+                                            transition: 'all 0.3s ease'
                                         }}
                                     />
                                 ))}
@@ -189,13 +196,45 @@ const ProjectCard = ({ project, index }) => {
             )}
 
             {/* Project Details */}
-            <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)', fontSize: '1.4rem' }}>{project.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1rem', flexGrow: 1, lineHeight: '1.6' }}>{project.description}</p>
+            <div style={{ padding: '1.35rem 1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                {project.isCurrent && (
+                    <div style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.45rem',
+                        padding: '0.25rem 0.75rem',
+                        borderRadius: 'var(--radius-full)',
+                        background: 'rgba(16, 185, 129, 0.12)',
+                        border: '1px solid rgba(16, 185, 129, 0.3)',
+                        marginBottom: '0.6rem',
+                        width: 'fit-content'
+                    }}>
+                        <span style={{
+                            width: '7px',
+                            height: '7px',
+                            borderRadius: '50%',
+                            backgroundColor: '#10b981',
+                            display: 'inline-block'
+                        }} className="animate-pulse" />
+                        <span style={{ fontSize: '0.7rem', fontWeight: '700', color: '#10b981', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+                            Current Project
+                        </span>
+                    </div>
+                )}
+                <h3 style={{ marginBottom: '0.6rem', color: 'var(--text-primary)', fontSize: '1.25rem' }}>{project.title}</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.2rem', fontSize: '0.9rem', flexGrow: 1, lineHeight: '1.5' }}>{project.description}</p>
 
-                <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', color: 'var(--accent-cyan)', fontSize: '0.85rem', fontFamily: 'var(--font-heading)' }}>
+                <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                     {project.tech.map((t, i) => (
-                        <li key={i} style={{ background: 'var(--chip-bg)', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>{t}</li>
+                        <li key={i} style={{
+                            background: 'var(--chip-bg)',
+                            color: 'var(--accent-cyan)',
+                            fontSize: '0.8rem',
+                            fontWeight: '500',
+                            padding: '0.3rem 0.75rem',
+                            borderRadius: 'var(--radius-full)',
+                            border: '1px solid rgba(56, 189, 248, 0.15)'
+                        }}>{t}</li>
                     ))}
                 </ul>
             </div>
@@ -243,13 +282,13 @@ const Projects = () => {
     };
 
     return (
-        <section className="section projects" id="projects" style={{ backgroundColor: 'var(--section-bg-alt)' }}>
+        <section className="section projects" id="projects">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    style={{ fontSize: '2.5rem', marginBottom: '4rem', textAlign: 'center' }}
+                    style={{ fontSize: '2.5rem', marginBottom: '2.2rem', textAlign: 'center' }}
                 >
                     Featured Projects
                 </motion.h2>

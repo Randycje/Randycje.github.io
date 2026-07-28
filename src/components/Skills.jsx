@@ -1,64 +1,111 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Brain, Code, Cpu, Layers, UserCheck } from 'lucide-react';
 
 const skillsData = [
-    { category: 'AI & ML', items: ['LlamaIndex', 'HuggingFace', 'ComfyUI', 'LangChain', 'LangSmith', 'APIs', 'PyTorch', 'Matplotlib', 'NumPy', 'Pandas', 'Scikit-learn'] },
-    { category: 'Technical Skills', items: ['Python', 'SQL', 'C++', 'C', 'C#', 'HTML/CSS', 'JavaScript'] },
-    { category: 'Platform & Software', items: ['ROS', 'UiPath', 'Tableau', 'Metabase'] },
-    { category: 'Management Skills', items: ['Project Management', 'Agile Methodologies', 'Stakeholder Management'] },
-    { category: 'Soft Skills', items: ['Critical Thinking', 'Innovative Thinking', 'Adaptability', 'Problem Solving'] }
+    { 
+        category: 'AI & ML', 
+        icon: Brain,
+        color: 'var(--accent-cyan)',
+        items: ['LlamaIndex', 'HuggingFace', 'ComfyUI', 'LangChain', 'LangSmith', 'APIs', 'PyTorch', 'Matplotlib', 'NumPy', 'Pandas', 'Scikit-learn'] 
+    },
+    { 
+        category: 'Technical Skills', 
+        icon: Code,
+        color: 'var(--accent-blue)',
+        items: ['Python', 'SQL', 'C++', 'C', 'C#', 'HTML/CSS', 'JavaScript'] 
+    },
+    { 
+        category: 'Platform & Software', 
+        icon: Cpu,
+        color: 'var(--accent-orange)',
+        items: ['ROS', 'UiPath', 'Tableau', 'Metabase'] 
+    },
+    { 
+        category: 'Management Skills', 
+        icon: Layers,
+        color: 'var(--accent-orange)',
+        items: ['Project Management', 'Agile Methodologies', 'Stakeholder Management'] 
+    },
+    { 
+        category: 'Soft Skills', 
+        icon: UserCheck,
+        color: 'var(--accent-purple)',
+        items: ['Critical Thinking', 'Innovative Thinking', 'Adaptability', 'Problem Solving'] 
+    }
 ];
-
-const colors = ['#FF2A54', 'var(--accent-cyan)', '#0A84FF', '#FF9F1C', '#9D4EDD'];
 
 const Skills = () => {
     return (
-        <section className="section skills" id="skills">
+        <section className="section skills" id="skills" style={{ position: 'relative' }}>
             <div className="container">
                 <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}
                 >
-                    Area of Expertise
+                    Area of <span style={{ color: 'var(--accent-cyan)' }}>Expertise</span>
                 </motion.h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem' }}>
-                    {skillsData.map((group, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            style={{
-                                background: 'var(--card-bg)',
-                                padding: '2rem',
-                                borderRadius: '4px',
-                                borderTop: `3px solid ${colors[index % colors.length]}`
-                            }}
-                        >
-                            <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>{group.category}</h3>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                                {group.items.map((skill, i) => (
-                                    <span key={i} style={{
-                                        padding: '0.35rem 0.75rem',
-                                        background: 'var(--chip-bg)',
-                                        borderRadius: '20px',
-                                        color: 'var(--text-primary)',
-                                        fontSize: '0.85rem',
-                                        display: 'inline-block',
-                                        lineHeight: '1.3',
-                                        fontFamily: 'var(--font-heading)',
-                                        border: '1px solid var(--card-border)'
-                                    }}>
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(185px, 1fr))', gap: '1.2rem' }}>
+                    {skillsData.map((group, index) => {
+                        const IconComponent = group.icon;
+                        return (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="glass-card"
+                                style={{
+                                    padding: '1.6rem 1.25rem',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
+                                }}
+                            >
+                                <div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                                        <div style={{
+                                            padding: '0.5rem',
+                                            borderRadius: '12px',
+                                            background: `${group.color}15`,
+                                            color: group.color,
+                                            display: 'flex'
+                                        }}>
+                                            <IconComponent size={22} />
+                                        </div>
+                                        <h3 style={{ margin: 0, fontSize: '1.3rem', color: 'var(--text-primary)' }}>{group.category}</h3>
+                                    </div>
+
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+                                        {group.items.map((skill, i) => (
+                                            <motion.span
+                                                key={i}
+                                                whileHover={{ scale: 1.05 }}
+                                                style={{
+                                                    padding: '0.4rem 0.85rem',
+                                                    background: 'var(--chip-bg)',
+                                                    borderRadius: 'var(--radius-full)',
+                                                    color: 'var(--text-primary)',
+                                                    fontSize: '0.85rem',
+                                                    fontWeight: '500',
+                                                    display: 'inline-block',
+                                                    lineHeight: '1.3',
+                                                    border: `1px solid ${group.color}25`,
+                                                    transition: 'all 0.2s ease'
+                                                }}
+                                            >
+                                                {skill}
+                                            </motion.span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

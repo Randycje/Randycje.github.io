@@ -9,10 +9,10 @@ const experiences = [
         period: 'Jan 2026 - Current',
         description: 'Current internship focused on automation systems.',
         points: [
-            'Coordinated with multiple vendors to execute User Acceptance (UAT) and Functional Integration Testing (FIT) for new automation system, ensuring seamless alignment with operational requirements prior to go-live.',
-            'Developed multiple interactive Tableau dashboards used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
-            'Supported Hypercare during warehouse automation rollout, cutting labour from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
-            'Managed the maintenance lifecycle for all Automation Equipments, transitioning from hands-on troubleshooting (LiDAR sensors, sensor testing, error debugging) to supervising technical teams for preventive maintenance execution.'
+            'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance. ',
+            'Spearheaded engineering improvement projects across existing AMHS automation by aligning multiple vendors and internal stakeholders for better system monitoring and maintenance. ',
+            'Coordinated with multiple vendors and inter-departments to execute User Acceptance (UAT), Functional Integration Testing (FIT) and Hypercare for new automation system, ensuring seamless alignment with operational requirements prior to go-live. Cutting labor from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
+            'Managed the maintenance lifecycle for all Automation Equipment, transitioning from hands-on troubleshooting (LiDAR sensors, drive units, sensor testing) to supervising technical teams for preventive maintenance execution.'
         ]
     },
     {
@@ -43,13 +43,13 @@ const experiences = [
 const Experience = () => {
     const [showAllExp, setShowAllExp] = useState(false);
     return (
-        <section className="section experience" id="experience" style={{ backgroundColor: 'var(--section-bg)' }}>
+        <section className="section experience" id="experience">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}
+                    style={{ fontSize: '2.5rem', marginBottom: '2.2rem', textAlign: 'center' }}
                 >
                     Work Experience
                 </motion.h2>
@@ -82,34 +82,36 @@ const Experience = () => {
                                     borderLeft: `4px solid ${index === 0 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}`
                                 }}
                             >
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '0.8rem' }}>
                                     <div>
-                                        <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
-                                        <h4 style={{ fontSize: '1.2rem', color: 'var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                            <Briefcase size={18} /> {exp.company}
+                                        <h3 style={{ fontSize: '1.3rem', marginBottom: '0.25rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
+                                        <h4 style={{ fontSize: '1.05rem', color: 'var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                            <Briefcase size={16} /> {exp.company}
                                         </h4>
                                     </div>
                                     <span style={{
-                                        fontSize: '0.9rem',
+                                        fontSize: '0.85rem',
                                         color: 'var(--text-secondary)',
                                         display: 'flex',
                                         alignItems: 'center',
-                                        gap: '0.5rem',
-                                        padding: '0.5rem 1rem',
+                                        gap: '0.4rem',
+                                        padding: '0.3rem 0.8rem',
                                         background: 'var(--chip-bg)',
                                         borderRadius: '20px',
-                                        marginTop: '0.5rem' // Added for mobile wrapping spacing
+                                        marginTop: '0.4rem'
                                     }}>
-                                        <Calendar size={14} /> {exp.period}
+                                        <Calendar size={13} /> {exp.period}
                                     </span>
                                 </div>
 
                                 <ul style={{ listStyle: 'none' }}>
                                     {exp.points.map((point, i) => (
                                         <li key={i} style={{
-                                            marginBottom: '0.8rem',
+                                            marginBottom: '0.5rem',
                                             position: 'relative',
-                                            paddingLeft: '1.5rem',
+                                            paddingLeft: '1.3rem',
+                                            fontSize: '0.95rem',
+                                            lineHeight: '1.5',
                                             color: 'var(--text-secondary)'
                                         }}>
                                             <span style={{ position: 'absolute', left: 0, color: 'var(--accent-cyan)' }}>▹</span>
