@@ -1,7 +1,6 @@
 # 🚀 Portfolio Website - Randy Chong
 
-A modern, high-performance personal portfolio website built with **React**, **Vite**, and **Framer Motion**.  
-Designed with a "Cyber/Tech" aesthetic to showcase expertise in **AI & ML** ,**Robotics**, and **Data Analytics**.
+A personal portfolio website built with **React**, **Vite**, and **Framer Motion**.  
 
 🔗 **Live Site:** [https://randycje.github.io/](https://randycje.github.io/)
 
