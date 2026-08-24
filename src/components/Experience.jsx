@@ -7,10 +7,10 @@ const experiences = [
         company: 'Infineon Technologies',
         role: 'Automation Engineer',
         period: 'Jan 2026 - Current',
-        description: 'Automation Engineer experience focused on developing and testing automation systems.',
+        description: 'Automation Engineer experience focused on developing and testing/maintaining automated material handling systems.',
         points: [
-            'Developed 5 interactive Tableau dashboards used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance. ',
-            'Spearheaded engineering improvement projects across existing AMHS automation by aligning multiple vendors and internal stakeholders for better system monitoring and maintenance. ',
+            'Automated data retrieval by creating scheduled ETL scripts, using Python and SQL to feed 30+ interactive Tableau dashboards, used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
+            'Spearheaded engineering improvement projects across existing AMHS automation by aligning multiple vendors and internal stakeholders for better system monitoring and maintenance.',
             'Coordinated with multiple vendors and inter-departments to execute User Acceptance (UAT), Functional Integration Testing (FIT) and Hypercare for new automation system, ensuring seamless alignment with operational requirements prior to go-live. Cutting labor from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
             'Managed the maintenance lifecycle for all Automation Equipment, transitioning from hands-on troubleshooting (LiDAR sensors, drive units, sensor testing) to supervising technical teams for preventive maintenance execution.'
         ]
