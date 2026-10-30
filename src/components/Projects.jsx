@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const projects = [
     {
         title: 'Automatic Computer Vision Unloading',
-        description: 'Trained a custom YOLOv8 object detection model using PyTorch and NumPy to automate a conveyor unloading system. Deployed the model in real-time using OpenCV and an external RTMP camera to process live camera feeds and execute safety-trigger unloading logic.',
+        description: 'Built an end-to-end computer vision proof-of-concept (PoC) by training a lightweight YOLOv8n model on custom-annotated industrial video, compiling weights to ONNX runtime for low-latency Raspberry Pi/CPU inference via OpenCV to execute automated unloading safety logic.',
         tech: ['Computer Vision', 'YOLOv8', 'PyTorch', 'OpenCV', 'Real-Time'],
         image: '/cv-unloading.jpg',
         isCurrent: true
@@ -17,14 +17,14 @@ const projects = [
         image: '/LSTM.png, LSTM2.png'
     },
     {
-        title: 'HDB Interior Design AI',
-        description: 'Built a multi-agent AI system on Telegram that guides users through HDB flat renovation planning. A manager agent runs a live competition between two AI designer agents, critiques their floor plans over three rounds, and generates a visualisation prompt for the winning design.',
+        title: 'Agentic AI HDB Interior Design',
+        description: 'Engineered a multi-agent architectural design system in LlamaIndex integrated with Telegram, orchestrating 5 specialized agents across tiered LLMs (Gemma 2/3) in a 3-round competitive evaluation loop to iteratively refine HDB concepts and generate optimized image-generation prompts.',
         tech: ['Personal Project', 'Agentic AI', 'LlamaIndex'],
         image: '/hdb-interior.png'
     },
     {
-        title: 'Aircraft Insurance Survivor Prediction',
-        description: 'Engineered a supervised machine learning classification model to predict flight crash survival probabilities for insurance agents. Conducted extensive Exploratory Data Analysis (EDA) to identify core features like age, gender, and fare. Deployed via a Flask web interface, the model achieves over 90% accuracy through rigorous hyperparameter tuning.',
+        title: 'Predictive Risk Classification',
+        description: 'Built an end-to-end supervised classification pipeline in scikit-learn to model passenger risk profiles, implementing EDA, feature encoding, hyperparameter tuning, and metric evaluation with deployment via a Flask web interface for real-time predictions.',
         tech: ['Machine Learning', 'Scikit-learn', 'Flask'],
         image: '/aircraft-insurance-ml.jpg'
     },

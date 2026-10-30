@@ -5,14 +5,13 @@ import { Briefcase, Calendar } from 'lucide-react';
 const experiences = [
     {
         company: 'Infineon Technologies',
-        role: 'Automation Engineer',
+        role: 'Automation Engineer (Data Analytics & Systems)',
         period: 'Jan 2026 - Current',
         description: 'Automation Engineer experience focused on developing and testing/maintaining automated material handling systems.',
         points: [
-            'Automated data retrieval by creating scheduled ETL scripts, using Python and SQL to feed 30+ interactive Tableau dashboards, used by cross-departmental management to monitor automation storage, efficiency and breakdown trends, directly enabling the shift toward data-driven predictive maintenance.',
-            'Spearheaded engineering improvement projects across existing AMHS automation by aligning multiple vendors and internal stakeholders for better system monitoring and maintenance.',
-            'Coordinated with multiple vendors and inter-departments to execute User Acceptance (UAT), Functional Integration Testing (FIT) and Hypercare for new automation system, ensuring seamless alignment with operational requirements prior to go-live. Cutting labor from ~20 to 2 per lane, increasing Test OEE by 6%, and eliminating customer returns.',
-            'Managed the maintenance lifecycle for all Automation Equipment, transitioning from hands-on troubleshooting (LiDAR sensors, drive units, sensor testing) to supervising technical teams for preventive maintenance execution.'
+            'Developed automated ETL pipelines using Python and Tableau Prep to ingest, clean, and transform database records, powering 30+ interactive Tableau dashboards that drove cross-departmental predictive maintenance operations.',
+            'Led cross-functional Root Cause Analysis (RCA) and Pareto failure-mode evaluations across multi-vendor AMHS equipment, resolving recurring system errors and reducing preventive maintenance duration by 12%.',
+            'Drove departmental execution of User Acceptance Testing (UAT), Functional Integration Testing (FIT), and Hypercare for new AMHS automation alongside vendor teams, cutting lane labor by 90% (~20 to 2 operators) and boosting OEE by 6%.'
         ]
     },
     {
@@ -32,10 +31,9 @@ const experiences = [
         period: 'Mar 2021 - Aug 2021',
         description: 'Data Science experience focused on financial data analysis and modeling.',
         points: [
-            'Consolidated 20+ disparate datasets using SQL to reveal key customer investing behaviors, enabling the leadership team to pivot strategy toward high-performing product lines.',
-            'Designed 30+ interactive Metabase dashboards for C-Suite executives, directly influencing the decision to discontinue underperforming investment packages.',
-            'Spearheaded the integration of Segment tracking to uncover user drop-off points, collaborated with engineering to resolve UI/UX friction which resulted in improved customer retention.',
-            'Developed and supported a series of high-performing landing pages and marketing campaigns, resulting in an 8× surge in daily lead growth (~50 to ~400 leads).'
+            'Authored complex SQL queries and multi-table aggregations across 20+ relational datasets to model investor behavior, building 30+ interactive Metabase dashboards for C-suite executives that steered decisions to discontinue underperforming investment tiers.',
+            'Implemented Segment event tracking to perform user funnel and cohort analysis, identifying drop-off friction points and collaborating with software engineers to optimize user journey flows and retention.',
+            'Conducted user acquisition and conversion rate optimization (CRO) analytics across campaign landing funnels, optimizing user onboarding pathways to drive an 8x surge in daily inbound leads (~50 to ~400).'
         ]
     }
 ];
